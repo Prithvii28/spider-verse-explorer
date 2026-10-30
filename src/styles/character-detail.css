@@ -1,0 +1,344 @@
+/* Character Detail Styles */
+
+.character-detail-view {
+  padding: 2rem 0 5rem 0;
+}
+
+.detail-not-found-container {
+  padding: 4rem 1.25rem;
+}
+
+.detail-back-bar {
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: 0.5rem 0.85rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  transition: color var(--trans-fast), border-color var(--trans-fast);
+}
+
+.back-link:hover {
+  color: var(--crimson-bright);
+  border-color: var(--border-active);
+}
+
+/* Dossier Grid */
+.detail-dossier-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .detail-dossier-grid {
+    grid-template-columns: 420px 1fr;
+    gap: 3.5rem;
+  }
+}
+
+/* Left Column: Portrait & Specs */
+.detail-portrait-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-image-card {
+  position: relative;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 5 / 6;
+}
+
+.detail-image-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--char-accent, var(--crimson-bright));
+  z-index: 3;
+}
+
+.detail-large-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.detail-portrait-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 65%, rgba(10, 11, 14, 0.9) 100%);
+  pointer-events: none;
+}
+
+.detail-portrait-badge-row {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.detail-dimension-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--silver-accent);
+  background-color: rgba(10, 11, 14, 0.85);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(8px);
+}
+
+/* Specs Card */
+.specs-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.specs-card-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+  color: var(--text-main);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.specs-dl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: 0.88rem;
+}
+
+.specs-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.specs-row dt {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.specs-row dd {
+  font-weight: 500;
+  color: var(--text-main);
+  text-align: right;
+}
+
+.status-highlight {
+  color: var(--crimson-bright) !important;
+  font-weight: 600 !important;
+}
+
+/* Right Column: Bio & Powers */
+.detail-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.detail-alias-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--char-accent, var(--crimson-bright));
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.detail-hero-name {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin-bottom: 0.8rem;
+}
+
+.detail-tagline-quote {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.55;
+  border-left: 3px solid var(--char-accent, var(--crimson-primary));
+  padding-left: 1rem;
+}
+
+.detail-section-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.detail-block-heading {
+  font-size: 1.45rem;
+  letter-spacing: 0.05em;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.detail-block-heading::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--border-subtle);
+}
+
+.detail-bio-paragraph {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+/* Powers Grid */
+.powers-list-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 600px) {
+  .powers-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.power-item-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  transition: border-color var(--trans-fast), transform var(--trans-fast);
+}
+
+.power-item-card:hover {
+  border-color: var(--border-active);
+  transform: translateX(4px);
+}
+
+.power-item-bullet {
+  color: var(--char-accent, var(--crimson-bright));
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.power-item-text {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+/* Suit Notes Card */
+.suit-notes-card {
+  background-color: rgba(18, 20, 27, 0.7);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+}
+
+.suit-notes-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.suit-notes-disclaimer {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+/* Jump Navigation */
+.detail-jump-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.jump-nav-btn {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.2rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  text-align: left;
+  transition: background-color var(--trans-fast), border-color var(--trans-fast), transform var(--trans-fast);
+}
+
+.jump-nav-btn.next-btn {
+  text-align: right;
+}
+
+.jump-nav-btn:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--crimson-bright);
+  transform: translateY(-2px);
+}
+
+.jump-nav-dir {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--crimson-bright);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+}
+
+.jump-nav-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--text-main);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.jump-nav-universe {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  margin-top: 0.2rem;
+}

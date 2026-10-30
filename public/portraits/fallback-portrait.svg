@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="fbBg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1c1f2b"/>
+      <stop offset="60%" stop-color="#101218"/>
+      <stop offset="100%" stop-color="#08090c"/>
+    </radialGradient>
+    <linearGradient id="fbCrimson" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e63946"/>
+      <stop offset="100%" stop-color="#700612"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="600" fill="url(#fbBg)"/>
+  <!-- Dimensional Grid Web -->
+  <g stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.5">
+    <circle cx="250" cy="260" r="120" fill="none"/>
+    <circle cx="250" cy="260" r="220" fill="none"/>
+    <line x1="250" y1="20" x2="250" y2="520"/>
+    <line x1="50" y1="260" x2="450" y2="260"/>
+  </g>
+  <!-- Silhouette Mask -->
+  <path d="M120 540 Q130 420 180 390 L250 420 L320 390 Q370 420 380 540 L420 600 L80 600 Z" fill="#141722"/>
+  <path d="M210 330 L210 400 Q250 420 290 400 L290 330 Z" fill="#181b28"/>
+  <path d="M160 220 C160 120 200 90 250 90 C300 90 340 120 340 220 C340 315 300 370 250 370 C200 370 160 315 160 220 Z" fill="#1e2233" stroke="#2c3248" stroke-width="3"/>
+  <!-- Stylized Dimensional Eyes -->
+  <path d="M240 215 C235 180 205 160 175 174 C170 210 180 260 236 265 Z" fill="#e63946" opacity="0.8"/>
+  <path d="M260 215 C265 180 295 160 325 174 C330 210 320 260 264 265 Z" fill="#e63946" opacity="0.8"/>
+  <!-- Multiverse Tag -->
+  <text x="250" y="470" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="16" font-weight="600" text-anchor="middle" letter-spacing="3">MULTIVERSE ARCHIVE</text>
+  <text x="250" y="500" fill="#64748b" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">RECORD VERIFIED</text>
+</svg>

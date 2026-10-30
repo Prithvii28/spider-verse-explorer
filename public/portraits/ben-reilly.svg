@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="benBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#2a0a14"/>
+      <stop offset="55%" stop-color="#10141f"/>
+      <stop offset="100%" stop-color="#06070a"/>
+    </radialGradient>
+    <linearGradient id="benRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2e43"/>
+      <stop offset="50%" stop-color="#d90429"/>
+      <stop offset="100%" stop-color="#800a16"/>
+    </linearGradient>
+    <linearGradient id="hoodieBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="50%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#075985"/>
+    </linearGradient>
+    <linearGradient id="wristShooter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="50%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="600" fill="url(#benBg)"/>
+
+  <!-- Dimensional Impact Webbing Burst in Background -->
+  <g stroke="#0284c7" stroke-opacity="0.18" stroke-width="2" fill="none">
+    <circle cx="250" cy="270" r="160" stroke-dasharray="6 6"/>
+    <circle cx="250" cy="270" r="230"/>
+    <line x1="80" y1="100" x2="420" y2="440"/>
+    <line x1="80" y1="440" x2="420" y2="100"/>
+  </g>
+
+  <!-- Crimson Bodysuit Sleeves & Shoulders -->
+  <path d="M90 560 Q110 420 160 380 L250 410 L340 380 Q390 420 410 560 L450 600 L50 600 Z" fill="url(#benRed)"/>
+
+  <!-- Sleeveless Cobalt Blue Hoodie Body -->
+  <path d="M120 560 Q140 405 180 385 L250 405 L320 385 Q360 405 380 560 L400 600 L100 600 Z" fill="url(#hoodieBlue)"/>
+  
+  <!-- Frayed Armhole Rips on Hoodie -->
+  <path d="M120 560 L140 440 L160 415 L175 440 L155 480 L140 540 Z" fill="#02476d"/>
+  <path d="M380 560 L360 440 L340 415 L325 440 L345 480 L360 540 Z" fill="#02476d"/>
+
+  <!-- Hoodie Center Front Pocket & Drawstrings -->
+  <path d="M180 530 L320 530 L340 600 L160 600 Z" fill="#075985" stroke="#0284c7" stroke-width="1.5"/>
+  <line x1="235" y1="410" x2="230" y2="470" stroke="#f8fafc" stroke-width="3" stroke-linecap="round"/>
+  <line x1="265" y1="410" x2="270" y2="470" stroke="#f8fafc" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Ben Reilly Slanted Chest Spider (Printed Asymmetrically) -->
+  <g fill="#0b0d12">
+    <!-- Body -->
+    <ellipse cx="245" cy="465" rx="14" ry="22" transform="rotate(-8 245 465)"/>
+    <!-- Left Legs -->
+    <path d="M236 450 C210 435 185 435 160 445 C180 442 205 445 230 458 Z"/>
+    <path d="M234 462 C205 455 175 465 145 490 C170 478 200 474 228 472 Z"/>
+    <path d="M236 476 C210 495 190 525 175 565 C190 532 212 512 234 488 Z"/>
+    <!-- Right Legs -->
+    <path d="M254 448 C280 432 305 432 330 442 C310 439 285 442 260 456 Z"/>
+    <path d="M256 460 C285 452 315 462 345 485 C320 474 290 470 262 470 Z"/>
+    <path d="M254 474 C280 492 300 522 315 560 C300 528 278 510 256 486 Z"/>
+  </g>
+
+  <!-- External Chrome Wrist Web-Shooters (Visible at bottom corners) -->
+  <g fill="url(#wristShooter)" stroke="#1e293b" stroke-width="2">
+    <!-- Left Shooter Block -->
+    <rect x="55" y="520" width="45" height="28" rx="6"/>
+    <circle cx="70" cy="534" r="5" fill="#c51b29"/>
+    <rect x="85" y="526" width="10" height="16" rx="2" fill="#334155"/>
+    <!-- Right Shooter Block -->
+    <rect x="400" y="520" width="45" height="28" rx="6"/>
+    <circle cx="430" cy="534" r="5" fill="#c51b29"/>
+    <rect x="405" y="526" width="10" height="16" rx="2" fill="#334155"/>
+  </g>
+
+  <!-- Pure Crimson Mask Neck (No Web Lines) -->
+  <path d="M210 330 L210 405 Q250 420 290 405 L290 330 Z" fill="url(#benRed)"/>
+
+  <!-- Pure Crimson Mask Head (Clean Solid Scarlet Suit, Iconic Reilly Style) -->
+  <path d="M150 230 C150 120 200 90 250 90 C300 90 350 120 350 230 C350 320 305 375 250 375 C195 375 150 320 150 230 Z" fill="url(#benRed)"/>
+
+  <!-- Big Bold White Eyes with Heavy Black Outlines -->
+  <!-- Left Eye Outer Frame -->
+  <path d="M242 220 C238 175 198 152 162 170 C154 216 166 274 238 276 C244 256 245 236 242 220 Z" fill="#0a0b0e" stroke="#000000" stroke-width="4"/>
+  <!-- Left Eye White Lens -->
+  <path d="M234 222 C230 185 200 166 172 180 C166 216 176 258 230 264 C235 248 235 235 234 222 Z" fill="#ffffff"/>
+
+  <!-- Right Eye Outer Frame -->
+  <path d="M258 220 C262 175 302 152 338 170 C346 216 334 274 262 276 C256 256 255 236 258 220 Z" fill="#0a0b0e" stroke="#000000" stroke-width="4"/>
+  <!-- Right Eye White Lens -->
+  <path d="M266 222 C270 185 300 166 328 180 C334 216 324 258 270 264 C265 248 265 235 266 222 Z" fill="#ffffff"/>
+
+  <!-- Subtle Rim Light on Crimson Hood & Mask -->
+  <path d="M152 230 C152 135 195 95 245 92" stroke="#ff758f" stroke-width="3" fill="none" opacity="0.4"/>
+</svg>

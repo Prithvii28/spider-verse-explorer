@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="milesBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#240810"/>
+      <stop offset="55%" stop-color="#121319"/>
+      <stop offset="100%" stop-color="#07080a"/>
+    </radialGradient>
+    <linearGradient id="suitBlack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2c36"/>
+      <stop offset="40%" stop-color="#14151a"/>
+      <stop offset="100%" stop-color="#0a0a0d"/>
+    </linearGradient>
+    <linearGradient id="sprayRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff1a35"/>
+      <stop offset="60%" stop-color="#c51b29"/>
+      <stop offset="100%" stop-color="#800a14"/>
+    </linearGradient>
+    <linearGradient id="milesLens" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <filter id="venomGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="600" fill="url(#milesBg)"/>
+
+  <!-- Brooklyn Skyline Geometric Silhouette -->
+  <g fill="#0b0c10" opacity="0.6">
+    <rect x="30" y="380" width="45" height="220"/>
+    <rect x="85" y="320" width="55" height="280"/>
+    <rect x="145" y="350" width="40" height="250"/>
+    <rect x="320" y="340" width="50" height="260"/>
+    <rect x="375" y="300" width="60" height="300"/>
+    <rect x="440" y="360" width="40" height="240"/>
+  </g>
+
+  <!-- Subtle Bio-Electric Energy Sparks -->
+  <g stroke="#ffb703" stroke-width="2.5" fill="none" opacity="0.85" filter="url(#venomGlow)">
+    <path d="M70 200 L95 230 L85 245 L115 285"/>
+    <path d="M410 180 L390 215 L405 230 L380 270"/>
+    <circle cx="115" cy="285" r="3" fill="#ffb703"/>
+    <circle cx="380" cy="270" r="3" fill="#ffb703"/>
+  </g>
+
+  <!-- Shoulders & Upper Body -->
+  <path d="M110 550 Q130 420 180 390 L250 415 L320 390 Q370 420 390 550 L430 600 L70 600 Z" fill="url(#suitBlack)"/>
+
+  <!-- Red Spray-Painted Spider Chest Insignia -->
+  <g fill="url(#sprayRed)">
+    <!-- Spider Body Core -->
+    <ellipse cx="250" cy="485" rx="14" ry="24"/>
+    <circle cx="250" cy="455" r="10"/>
+    <!-- Top Left Legs -->
+    <path d="M242 458 C220 440 195 442 170 460 C190 450 215 452 236 466 Z"/>
+    <path d="M240 472 C210 460 185 470 160 500 C180 480 208 474 235 480 Z"/>
+    <!-- Bottom Left Legs -->
+    <path d="M242 494 C215 506 195 530 180 570 C195 540 215 522 240 506 Z"/>
+    <path d="M244 504 C225 528 215 555 210 595 C222 565 232 540 246 514 Z"/>
+    <!-- Top Right Legs -->
+    <path d="M258 458 C280 440 305 442 330 460 C310 450 285 452 264 466 Z"/>
+    <path d="M260 472 C290 460 315 470 340 500 C320 480 292 474 265 480 Z"/>
+    <!-- Bottom Right Legs -->
+    <path d="M258 494 C285 506 305 530 320 570 C305 540 285 522 260 506 Z"/>
+    <path d="M256 504 C275 528 285 555 290 595 C278 565 268 540 254 514 Z"/>
+  </g>
+
+  <!-- Red Shoulder/Rib Accents -->
+  <path d="M140 460 Q170 410 200 400 L204 410 Q175 422 148 468 Z" fill="#c51b29"/>
+  <path d="M360 460 Q330 410 300 400 L296 410 Q325 422 352 468 Z" fill="#c51b29"/>
+
+  <!-- Neck -->
+  <path d="M210 330 L210 400 Q250 415 290 400 L290 330 Z" fill="url(#suitBlack)"/>
+
+  <!-- Head Silhouette -->
+  <path d="M152 225 C152 120 200 90 250 90 C300 90 348 120 348 225 C348 318 304 372 250 372 C196 372 152 318 152 225 Z" fill="url(#suitBlack)"/>
+
+  <!-- Subtle Dark Crimson Mask Webbing Pattern -->
+  <g stroke="#c51b29" stroke-width="1.8" opacity="0.65" fill="none">
+    <line x1="250" y1="225" x2="250" y2="92"/>
+    <line x1="250" y1="225" x2="210" y2="100"/>
+    <line x1="250" y1="225" x2="290" y2="100"/>
+    <line x1="250" y1="225" x2="180" y2="125"/>
+    <line x1="250" y1="225" x2="320" y2="125"/>
+    <line x1="250" y1="225" x2="158" y2="175"/>
+    <line x1="250" y1="225" x2="342" y2="175"/>
+    <line x1="250" y1="225" x2="162" y2="285"/>
+    <line x1="250" y1="225" x2="338" y2="285"/>
+    <line x1="250" y1="225" x2="200" y2="350"/>
+    <line x1="250" y1="225" x2="300" y2="350"/>
+    <!-- Arcs -->
+    <path d="M225 135 Q250 148 275 135"/>
+    <path d="M205 168 Q250 185 295 168"/>
+    <path d="M190 210 Q250 230 310 210"/>
+    <path d="M192 270 Q250 295 308 270"/>
+    <path d="M212 320 Q250 345 288 320"/>
+  </g>
+
+  <!-- Left Eye Outer Red Ring -->
+  <path d="M242 222 C238 180 202 158 165 174 C158 215 168 272 238 278 C243 258 244 238 242 222 Z" fill="none" stroke="#e63946" stroke-width="4"/>
+  <!-- Left Eye Black Border -->
+  <path d="M240 222 C236 182 204 162 168 176 C162 214 170 268 236 274 C241 256 242 237 240 222 Z" fill="#08090b" stroke="#000000" stroke-width="3"/>
+  <!-- Left Eye Sleek Lens -->
+  <path d="M232 224 C228 192 202 176 177 186 C173 216 180 254 228 263 C233 248 233 235 232 224 Z" fill="url(#milesLens)"/>
+
+  <!-- Right Eye Outer Red Ring -->
+  <path d="M258 222 C262 180 298 158 335 174 C342 215 332 272 262 278 C257 258 256 238 258 222 Z" fill="none" stroke="#e63946" stroke-width="4"/>
+  <!-- Right Eye Black Border -->
+  <path d="M260 222 C264 182 296 162 332 176 C338 214 330 268 264 274 C259 256 258 237 260 222 Z" fill="#08090b" stroke="#000000" stroke-width="3"/>
+  <!-- Right Eye Sleek Lens -->
+  <path d="M268 224 C272 192 298 176 323 186 C327 216 320 254 272 263 C267 248 267 235 268 224 Z" fill="url(#milesLens)"/>
+
+  <!-- Electric Spark at Chin/Collar -->
+  <path d="M235 385 L250 375 L245 395 L260 382" stroke="#48cae4" stroke-width="2.5" fill="none" filter="url(#venomGlow)"/>
+</svg>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="gwenBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#2a081a"/>
+      <stop offset="55%" stop-color="#141018"/>
+      <stop offset="100%" stop-color="#08070b"/>
+    </radialGradient>
+    <linearGradient id="hoodWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <linearGradient id="hoodInsidePink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2a85"/>
+      <stop offset="50%" stop-color="#c2185b"/>
+      <stop offset="100%" stop-color="#880e4f"/>
+    </linearGradient>
+    <linearGradient id="gwenTorso" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#24283b"/>
+      <stop offset="50%" stop-color="#12141e"/>
+      <stop offset="100%" stop-color="#08090d"/>
+    </linearGradient>
+    <linearGradient id="gwenLens" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f5d4"/>
+      <stop offset="30%" stop-color="#ffffff"/>
+      <stop offset="80%" stop-color="#e0e7ff"/>
+      <stop offset="100%" stop-color="#c7d2fe"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="600" fill="url(#gwenBg)"/>
+
+  <!-- Soundwave / Drum Rhythm Graphic in Background -->
+  <g stroke="#ff2a85" stroke-opacity="0.18" stroke-width="2" fill="none">
+    <path d="M40 300 Q100 240 160 300 T280 300 T400 300 T480 300"/>
+    <path d="M40 330 Q100 270 160 330 T280 330 T400 330 T480 330"/>
+    <circle cx="250" cy="270" r="220" stroke="#00f5d4" stroke-opacity="0.12" stroke-dasharray="4 8"/>
+  </g>
+
+  <!-- Shoulders / Torso -->
+  <path d="M110 560 Q130 430 180 400 L250 425 L320 400 Q370 430 390 560 L420 600 L80 600 Z" fill="url(#gwenTorso)"/>
+  
+  <!-- Sleek Pink Chest / Upper Torso Wings -->
+  <path d="M180 400 L250 425 L320 400 L300 480 Q250 510 200 480 Z" fill="url(#hoodInsidePink)" opacity="0.9"/>
+  <!-- Teal Graphic Slash -->
+  <path d="M195 440 L250 470 L305 440 L300 450 L250 480 L200 450 Z" fill="#00f5d4"/>
+
+  <!-- Neck Area -->
+  <path d="M215 340 L215 410 Q250 425 285 410 L285 340 Z" fill="#0c0e14"/>
+
+  <!-- Inner Hood Magenta Cavity -->
+  <path d="M130 220 C125 110 180 60 250 60 C320 60 375 110 370 220 C368 290 345 370 250 375 C155 370 132 290 130 220 Z" fill="url(#hoodInsidePink)"/>
+
+  <!-- Magenta Interior Webbing Lines -->
+  <g stroke="#ffffff" stroke-opacity="0.3" stroke-width="1.8" fill="none">
+    <path d="M160 160 Q250 110 340 160"/>
+    <path d="M145 220 Q250 170 355 220"/>
+    <path d="M140 280 Q250 230 360 280"/>
+    <line x1="250" y1="70" x2="250" y2="370"/>
+    <line x1="200" y1="90" x2="160" y2="340"/>
+    <line x1="300" y1="90" x2="340" y2="340"/>
+  </g>
+
+  <!-- Masked Head (White) -->
+  <path d="M165 220 C165 135 205 105 250 105 C295 105 335 135 335 220 C335 305 295 355 250 355 C205 355 165 305 165 220 Z" fill="url(#hoodWhite)"/>
+
+  <!-- Eye Surrounds: Sleek Magenta & Cyan Contour -->
+  <!-- Left Eye Outer Contour -->
+  <path d="M242 216 C238 185 212 165 182 178 C176 210 184 256 238 262 C242 246 244 230 242 216 Z" fill="#ff2a85"/>
+  <!-- Left Eye Inner Cutout -->
+  <path d="M240 216 C236 188 214 170 186 182 C181 210 188 250 236 256 C240 244 241 230 240 216 Z" fill="#0b0d13"/>
+  <!-- Left Eye Lens -->
+  <path d="M235 218 C232 194 214 180 192 190 C188 212 194 244 232 248 C235 238 236 228 235 218 Z" fill="url(#gwenLens)"/>
+
+  <!-- Right Eye Outer Contour -->
+  <path d="M258 216 C262 185 288 165 318 178 C324 210 316 256 262 262 C258 246 256 230 258 216 Z" fill="#ff2a85"/>
+  <!-- Right Eye Inner Cutout -->
+  <path d="M260 216 C264 188 286 170 314 182 C319 210 312 250 264 256 C260 244 259 230 260 216 Z" fill="#0b0d13"/>
+  <!-- Right Eye Lens -->
+  <path d="M265 218 C268 194 286 180 308 190 C312 212 306 244 268 248 C265 238 264 228 265 218 Z" fill="url(#gwenLens)"/>
+
+  <!-- Outer White Cowl / Hood Overhang -->
+  <path d="M120 220 C115 90 180 40 250 40 C320 40 385 90 380 220 C376 295 360 380 340 430 L320 395 C350 330 365 260 365 210 C365 110 315 65 250 65 C185 65 135 110 135 210 C135 260 150 330 180 395 L160 430 C140 380 124 295 120 220 Z" fill="url(#hoodWhite)" filter="drop-shadow(0px 8px 12px rgba(0,0,0,0.5))"/>
+
+  <!-- Hood Fold Linework -->
+  <path d="M250 40 L250 65" stroke="#cbd5e1" stroke-width="2"/>
+  <path d="M180 90 Q250 70 320 90" stroke="#cbd5e1" stroke-width="2" fill="none"/>
+</svg>

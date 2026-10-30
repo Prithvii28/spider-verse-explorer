@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="hamBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#300d18"/>
+      <stop offset="55%" stop-color="#14141a"/>
+      <stop offset="100%" stop-color="#08080c"/>
+    </radialGradient>
+    <linearGradient id="hamRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3b56"/>
+      <stop offset="50%" stop-color="#d90429"/>
+      <stop offset="100%" stop-color="#7a0a18"/>
+    </linearGradient>
+    <linearGradient id="hamBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="600" fill="url(#hamBg)"/>
+
+  <!-- Pop-Art Comic Halftone Circles Background -->
+  <g fill="#ff3b56" opacity="0.1">
+    <circle cx="80" cy="100" r="14"/><circle cx="120" cy="100" r="14"/><circle cx="160" cy="100" r="14"/>
+    <circle cx="80" cy="140" r="14"/><circle cx="120" cy="140" r="14"/><circle cx="160" cy="140" r="14"/>
+    <circle cx="340" cy="460" r="14"/><circle cx="380" cy="460" r="14"/><circle cx="420" cy="460" r="14"/>
+    <circle cx="340" cy="500" r="14"/><circle cx="380" cy="500" r="14"/><circle cx="420" cy="500" r="14"/>
+  </g>
+
+  <!-- Giant Comic Mallet Outline in Background Silhouette -->
+  <g fill="#20232e" opacity="0.4">
+    <rect x="360" y="80" width="100" height="150" rx="20"/>
+    <line x1="410" y1="230" x2="410" y2="420" stroke="#20232e" stroke-width="24" stroke-linecap="round"/>
+  </g>
+
+  <!-- Shoulders & Upper Body -->
+  <path d="M120 560 Q140 430 190 410 L250 435 L310 410 Q360 430 380 560 L420 600 L80 600 Z" fill="url(#hamBlue)"/>
+  <!-- Red Chest Plate -->
+  <path d="M190 410 L250 435 L310 410 L295 600 L205 600 Z" fill="url(#hamRed)"/>
+
+  <!-- Webbing on Chest -->
+  <path d="M250 435 L250 600 M210 480 Q250 500 290 480 M200 540 Q250 560 300 540" stroke="#1c0205" stroke-width="2.5" fill="none"/>
+
+  <!-- Pig Ears (Red Suit Fabric with Webbing) -->
+  <path d="M130 130 C120 70 170 50 195 105 C180 125 155 135 130 130 Z" fill="url(#hamRed)" stroke="#111" stroke-width="3"/>
+  <path d="M370 130 C380 70 330 50 305 105 C320 125 345 135 370 130 Z" fill="url(#hamRed)" stroke="#111" stroke-width="3"/>
+
+  <!-- Round Pig Head Silhouette -->
+  <circle cx="250" cy="240" r="130" fill="url(#hamRed)" stroke="#111" stroke-width="4"/>
+
+  <!-- Head Radiating Web Lines -->
+  <g stroke="#260308" stroke-width="2.5" fill="none">
+    <line x1="250" y1="230" x2="250" y2="110"/>
+    <line x1="250" y1="230" x2="200" y2="120"/>
+    <line x1="250" y1="230" x2="300" y2="120"/>
+    <line x1="250" y1="230" x2="155" y2="155"/>
+    <line x1="250" y1="230" x2="345" y2="155"/>
+    <line x1="250" y1="230" x2="125" y2="210"/>
+    <line x1="250" y1="230" x2="375" y2="210"/>
+    <line x1="250" y1="230" x2="135" y2="285"/>
+    <line x1="250" y1="230" x2="365" y2="285"/>
+    <!-- Web Arcs -->
+    <path d="M210 145 Q250 160 290 145"/>
+    <path d="M175 180 Q250 205 325 180"/>
+    <path d="M150 230 Q250 265 350 230"/>
+    <path d="M165 295 Q250 330 335 295"/>
+  </g>
+
+  <!-- Big Stylized Comic Eyes -->
+  <!-- Left Eye -->
+  <path d="M242 205 C235 155 195 130 160 155 C150 205 170 265 235 260 C242 245 244 225 242 205 Z" fill="#0c0d12" stroke="#000" stroke-width="4"/>
+  <path d="M234 207 C228 165 195 145 170 165 C162 205 178 250 228 248 C234 235 235 220 234 207 Z" fill="#ffffff"/>
+
+  <!-- Right Eye -->
+  <path d="M258 205 C265 155 305 130 340 155 C350 205 330 265 265 260 C258 245 256 225 258 205 Z" fill="#0c0d12" stroke="#000" stroke-width="4"/>
+  <path d="M266 207 C272 165 305 145 330 165 C338 205 322 250 272 248 C266 235 265 220 266 207 Z" fill="#ffffff"/>
+
+  <!-- Iconic Spider-Ham Snout (Red Webbed Oval with Big Nostrils) -->
+  <ellipse cx="250" cy="295" rx="58" ry="42" fill="url(#hamRed)" stroke="#0c0d12" stroke-width="4"/>
+  <!-- Snout Webbing -->
+  <line x1="250" y1="253" x2="250" y2="337" stroke="#260308" stroke-width="2"/>
+  <line x1="192" y1="295" x2="308" y2="295" stroke="#260308" stroke-width="2"/>
+  <ellipse cx="250" cy="295" rx="30" ry="20" fill="none" stroke="#260308" stroke-width="1.8"/>
+
+  <!-- Dual Nostrils -->
+  <ellipse cx="230" cy="295" rx="14" ry="18" fill="#14151b"/>
+  <ellipse cx="270" cy="295" rx="14" ry="18" fill="#14151b"/>
+  <circle cx="227" cy="290" r="3" fill="#ffffff" opacity="0.3"/>
+  <circle cx="267" cy="290" r="3" fill="#ffffff" opacity="0.3"/>
+</svg>

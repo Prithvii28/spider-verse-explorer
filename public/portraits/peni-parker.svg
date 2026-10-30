@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="peniBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#2a0a14"/>
+      <stop offset="55%" stop-color="#11131c"/>
+      <stop offset="100%" stop-color="#06070a"/>
+    </radialGradient>
+    <linearGradient id="mechRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3b56"/>
+      <stop offset="50%" stop-color="#c51b29"/>
+      <stop offset="100%" stop-color="#700612"/>
+    </linearGradient>
+    <linearGradient id="spdrEye" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#ff4d6d"/>
+      <stop offset="100%" stop-color="#800f2f"/>
+    </linearGradient>
+    <filter id="neonHud" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="600" fill="url(#peniBg)"/>
+
+  <!-- Manga / Cyber HUD Reticles -->
+  <g stroke="#ff3b56" stroke-opacity="0.25" stroke-width="1.5" fill="none">
+    <circle cx="250" cy="220" r="160" stroke-dasharray="8 6"/>
+    <circle cx="250" cy="220" r="190" stroke-dasharray="2 4"/>
+    <line x1="250" y1="20" x2="250" y2="90"/>
+    <line x1="250" y1="350" x2="250" y2="420"/>
+    <line x1="50" y1="220" x2="120" y2="220"/>
+    <line x1="380" y1="220" x2="450" y2="220"/>
+  </g>
+
+  <!-- Giant SP//dr Spherical Mech Silhouette Behind -->
+  <circle cx="250" cy="220" r="140" fill="#141824" stroke="url(#mechRed)" stroke-width="8"/>
+  <ellipse cx="250" cy="180" rx="90" ry="50" fill="#0d1017"/>
+
+  <!-- SP//dr Iconic Glowing Optic Clusters -->
+  <g filter="url(#neonHud)">
+    <!-- Central Main Cyclops Sensor -->
+    <circle cx="250" cy="175" r="32" fill="url(#spdrEye)"/>
+    <circle cx="250" cy="175" r="16" fill="#ffffff"/>
+    <!-- Secondary Sensor Satellites -->
+    <circle cx="195" cy="190" r="12" fill="#ff3b56"/>
+    <circle cx="305" cy="190" r="12" fill="#ff3b56"/>
+    <circle cx="165" cy="165" r="8" fill="#ff758f"/>
+    <circle cx="335" cy="165" r="8" fill="#ff758f"/>
+  </g>
+
+  <!-- Mech Shoulder Armor Blocks -->
+  <path d="M40 380 L140 300 L170 380 L60 480 Z" fill="url(#mechRed)" stroke="#0b0d13" stroke-width="4"/>
+  <path d="M460 380 L360 300 L330 380 L440 480 Z" fill="url(#mechRed)" stroke="#0b0d13" stroke-width="4"/>
+
+  <!-- Peni Parker Upper Body (Front Center) -->
+  <!-- School Pilot Uniform -->
+  <path d="M150 560 Q170 430 200 420 L250 435 L300 420 Q330 430 350 560 L370 600 L130 600 Z" fill="#1e2433"/>
+  <polygon points="250,440 230,480 250,560 270,480" fill="#c51b29"/> <!-- Red tie -->
+  <polygon points="215,425 250,455 235,475 205,435" fill="#f8fafc"/> <!-- White collar left -->
+  <polygon points="285,425 250,455 265,475 295,435" fill="#f8fafc"/> <!-- White collar right -->
+
+  <!-- Neck -->
+  <path d="M225 375 L225 430 Q250 440 275 430 L275 375 Z" fill="#fad2b8"/>
+
+  <!-- Hair Base & Face Silhouette -->
+  <!-- Black Bob Hair Cut with Bangs -->
+  <path d="M185 300 C175 250 200 230 250 230 C300 230 325 250 315 300 C325 350 320 390 310 400 L290 380 C270 405 230 405 210 380 L190 400 C180 390 175 350 185 300 Z" fill="#11131a"/>
+  
+  <!-- Face Contour -->
+  <path d="M198 300 C198 250 215 250 250 250 C285 250 302 250 302 300 C302 355 275 385 250 385 C225 385 198 355 198 300 Z" fill="#fde2d0"/>
+
+  <!-- Anime Hair Bangs Over Face -->
+  <polygon points="200,260 220,310 232,270 250,315 268,270 280,310 300,260 280,245 220,245" fill="#181a24"/>
+
+  <!-- Cyber Headset / Interface Antenna -->
+  <circle cx="192" cy="305" r="10" fill="#c51b29" stroke="#ffffff" stroke-width="2"/>
+  <rect x="180" y="300" width="10" height="20" rx="3" fill="#334155"/>
+  <circle cx="308" cy="305" r="10" fill="#c51b29" stroke="#ffffff" stroke-width="2"/>
+  <rect x="310" y="300" width="10" height="20" rx="3" fill="#334155"/>
+  <!-- Headset band -->
+  <path d="M192 300 C190 230 310 230 308 300" stroke="#c51b29" stroke-width="4" fill="none"/>
+
+  <!-- Peni's Eyes & Smile -->
+  <!-- Left Eye -->
+  <ellipse cx="225" cy="315" rx="10" ry="14" fill="#1e1b2e"/>
+  <circle cx="223" cy="310" r="4" fill="#ffffff"/>
+  <circle cx="227" cy="322" r="2" fill="#ff758f"/>
+  <!-- Right Eye -->
+  <ellipse cx="275" cy="315" rx="10" ry="14" fill="#1e1b2e"/>
+  <circle cx="273" cy="310" r="4" fill="#ffffff"/>
+  <circle cx="277" cy="322" r="2" fill="#ff758f"/>
+  <!-- Anime Blush & Confident Grin -->
+  <ellipse cx="215" cy="335" rx="8" ry="4" fill="#ff4d6d" opacity="0.4"/>
+  <ellipse cx="285" cy="335" rx="8" ry="4" fill="#ff4d6d" opacity="0.4"/>
+  <path d="M242 348 Q250 356 258 348" stroke="#7f1d1d" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg>

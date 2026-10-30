@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="maydayBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#2a0812"/>
+      <stop offset="55%" stop-color="#12131c"/>
+      <stop offset="100%" stop-color="#06070a"/>
+    </radialGradient>
+    <linearGradient id="maydayRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3b4e"/>
+      <stop offset="45%" stop-color="#d90429"/>
+      <stop offset="100%" stop-color="#800a18"/>
+    </linearGradient>
+    <linearGradient id="maydayNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d3557"/>
+      <stop offset="100%" stop-color="#091424"/>
+    </linearGradient>
+    <linearGradient id="maydayLens" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="600" fill="url(#maydayBg)"/>
+
+  <!-- MC2 Dimension Geometric Starburst & Web -->
+  <g stroke="#ff3b4e" stroke-opacity="0.14" stroke-width="1.8" fill="none">
+    <circle cx="250" cy="250" r="120"/>
+    <circle cx="250" cy="250" r="210"/>
+    <polygon points="250,30 290,190 450,250 290,310 250,470 210,310 50,250 210,190"/>
+  </g>
+
+  <!-- Athletic Slender Shoulders / Torso -->
+  <path d="M130 560 Q145 430 185 395 L250 420 L315 395 Q355 430 370 560 L410 600 L90 600 Z" fill="url(#maydayNavy)"/>
+  
+  <!-- Red Chest Plate with Extended Web V-Cut -->
+  <path d="M185 395 L250 420 L315 395 L295 600 L205 600 Z" fill="url(#maydayRed)"/>
+
+  <!-- Big MC2 Spider Chest Emblem -->
+  <g fill="#0b0d12">
+    <ellipse cx="250" cy="485" rx="12" ry="20"/>
+    <circle cx="250" cy="460" r="9"/>
+    <!-- Upper Legs Extending Over Shoulders -->
+    <path d="M242 460 C220 440 195 440 165 450 C185 445 210 448 234 466 Z"/>
+    <path d="M240 472 C210 460 180 468 150 490 C175 476 205 474 234 480 Z"/>
+    <path d="M258 460 C280 440 305 440 335 450 C315 445 290 448 266 466 Z"/>
+    <path d="M260 472 C290 460 320 468 350 490 C325 476 295 474 266 480 Z"/>
+    <!-- Lower Legs -->
+    <path d="M242 494 C215 510 195 538 185 580 C198 548 218 528 240 506 Z"/>
+    <path d="M258 494 C285 510 305 538 315 580 C302 548 282 528 260 506 Z"/>
+  </g>
+
+  <!-- Slender Neck -->
+  <path d="M215 330 L215 400 Q250 415 285 400 L285 330 Z" fill="url(#maydayRed)"/>
+  <line x1="250" y1="330" x2="250" y2="415" stroke="#220206" stroke-width="2.5"/>
+
+  <!-- Sleek Head Silhouette -->
+  <path d="M160 225 C160 125 200 95 250 95 C300 95 340 125 340 225 C340 315 300 370 250 370 C200 370 160 315 160 225 Z" fill="url(#maydayRed)"/>
+
+  <!-- Webbing Pattern on Mask -->
+  <g stroke="#260308" stroke-width="2.2" fill="none">
+    <line x1="250" y1="225" x2="250" y2="96"/>
+    <line x1="250" y1="225" x2="215" y2="102"/>
+    <line x1="250" y1="225" x2="285" y2="102"/>
+    <line x1="250" y1="225" x2="185" y2="124"/>
+    <line x1="250" y1="225" x2="315" y2="124"/>
+    <line x1="250" y1="225" x2="166" y2="175"/>
+    <line x1="250" y1="225" x2="334" y2="175"/>
+    <line x1="250" y1="225" x2="168" y2="285"/>
+    <line x1="250" y1="225" x2="332" y2="285"/>
+    <line x1="250" y1="225" x2="205" y2="350"/>
+    <line x1="250" y1="225" x2="295" y2="350"/>
+    <!-- Web Loops -->
+    <path d="M228 135 Q250 148 272 135"/>
+    <path d="M208 168 Q250 188 292 168"/>
+    <path d="M192 210 Q250 235 308 210"/>
+    <path d="M196 270 Q250 300 304 270"/>
+    <path d="M215 320 Q250 345 285 320"/>
+  </g>
+
+  <!-- Dynamic Narrow Athletic Eye Lenses -->
+  <!-- Left Eye -->
+  <path d="M242 222 C238 185 205 165 170 178 C164 216 172 268 238 272 C243 255 244 238 242 222 Z" fill="#0b0c10" stroke="#000" stroke-width="4"/>
+  <path d="M234 224 C230 195 205 178 180 188 C176 216 182 254 230 260 C234 246 234 234 234 224 Z" fill="url(#maydayLens)"/>
+  
+  <!-- Right Eye -->
+  <path d="M258 222 C262 185 295 165 330 178 C336 216 328 268 262 272 C257 255 256 238 258 222 Z" fill="#0b0c10" stroke="#000" stroke-width="4"/>
+  <path d="M266 224 C270 195 295 178 320 188 C324 216 318 254 270 260 C266 246 266 234 266 224 Z" fill="url(#maydayLens)"/>
+</svg>

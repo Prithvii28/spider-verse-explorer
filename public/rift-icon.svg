@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#0c0d12"/>
+  <circle cx="32" cy="32" r="28" stroke="#1f222e" stroke-width="2"/>
+  <!-- Dimensional Rift / Geometric Web Mark -->
+  <path d="M32 6 L32 58 M6 32 L58 32 M14 14 L50 50 M14 50 L50 14" stroke="#2a2e3d" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <polygon points="32,12 46,24 46,40 32,52 18,40 18,24" stroke="#c51b29" stroke-width="2" fill="none"/>
+  <polygon points="32,20 40,27 40,37 32,44 24,37 24,27" stroke="#e63946" stroke-width="1.5" fill="#15171f"/>
+  <path d="M28 29 L36 35 M36 29 L28 35" stroke="#f7f4ea" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="32" cy="32" r="3" fill="#e63946"/>
+</svg>

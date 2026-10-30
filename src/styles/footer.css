@@ -1,0 +1,111 @@
+/* Footer Styles */
+
+.site-footer {
+  background-color: #08090c;
+  border-top: 1px solid var(--border-subtle);
+  padding: 4rem 0 2rem 0;
+  margin-top: 5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding-bottom: 0;
+}
+
+@media (min-width: 640px) {
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-top {
+    grid-template-columns: 2fr 1fr 1.2fr;
+    gap: 3rem;
+  }
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.footer-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.footer-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--silver-accent);
+  background-color: var(--bg-card);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--crimson-bright);
+  box-shadow: 0 0 8px var(--crimson-bright);
+}
+
+.footer-col-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  color: var(--text-main);
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.footer-col-title::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--crimson-primary);
+  margin-top: 0.35rem;
+}
+
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links-list a,
+.footer-text-btn {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--trans-fast), transform var(--trans-fast);
+  display: inline-block;
+  text-align: left;
+}
+
+.footer-links-list a:hover,
+.footer-text-btn:hover {
+  color: var(--text-main);
+  transform: translateX(3px);
+}
+
+.footer-text-btn {
+  font-family: inherit;
+  padding: 0;
+}
+

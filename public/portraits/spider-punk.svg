@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="punkBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#320618"/>
+      <stop offset="55%" stop-color="#14141c"/>
+      <stop offset="100%" stop-color="#07080c"/>
+    </radialGradient>
+    <linearGradient id="punkRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff0055"/>
+      <stop offset="50%" stop-color="#c51b29"/>
+      <stop offset="100%" stop-color="#700615"/>
+    </linearGradient>
+    <linearGradient id="denimVest" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="50%" stop-color="#112238"/>
+      <stop offset="100%" stop-color="#08101a"/>
+    </linearGradient>
+    <linearGradient id="chromeMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="600" fill="url(#punkBg)"/>
+
+  <!-- Jagged Zine Splatters & Rebel Lines -->
+  <g stroke="#ff0055" stroke-opacity="0.25" stroke-width="2" fill="none">
+    <path d="M40 80 L90 60 L140 100 L70 120 Z"/>
+    <path d="M410 400 L460 380 L440 450 L390 430 Z"/>
+    <line x1="20" y1="200" x2="110" y2="215"/>
+    <line x1="390" y1="180" x2="480" y2="170"/>
+  </g>
+
+  <!-- Electric Guitar Headstock Silhouette (Left Background) -->
+  <g fill="#161822" stroke="#ff0055" stroke-opacity="0.3" stroke-width="2">
+    <polygon points="60,20 120,40 100,160 50,150"/>
+    <circle cx="50" cy="50" r="6" fill="#94a3b8"/>
+    <circle cx="45" cy="80" r="6" fill="#94a3b8"/>
+    <circle cx="40" cy="110" r="6" fill="#94a3b8"/>
+  </g>
+
+  <!-- Denim Battle Vest & Red Bodysuit Shoulders -->
+  <path d="M100 560 Q120 420 170 390 L250 415 L330 390 Q380 420 400 560 L440 600 L60 600 Z" fill="url(#punkRed)"/>
+  
+  <!-- Cutoff Denim Vest Overlay -->
+  <path d="M105 560 L160 400 L210 450 L200 600 L70 600 Z" fill="url(#denimVest)" stroke="#38bdf8" stroke-dasharray="4 4" stroke-width="2"/>
+  <path d="M395 560 L340 400 L290 450 L300 600 L430 600 Z" fill="url(#denimVest)" stroke="#38bdf8" stroke-dasharray="4 4" stroke-width="2"/>
+
+  <!-- Vest Metal Studs / Pins -->
+  <circle cx="160" cy="450" r="5" fill="url(#chromeMetal)"/>
+  <circle cx="150" cy="480" r="5" fill="url(#chromeMetal)"/>
+  <circle cx="140" cy="510" r="5" fill="url(#chromeMetal)"/>
+  <circle cx="340" cy="450" r="5" fill="url(#chromeMetal)"/>
+  <circle cx="350" cy="480" r="5" fill="url(#chromeMetal)"/>
+  <circle cx="360" cy="510" r="5" fill="url(#chromeMetal)"/>
+  
+  <!-- Anarchy Pin Badge on Vest Lapel -->
+  <circle cx="180" cy="485" r="14" fill="#ffffff" stroke="#111" stroke-width="2"/>
+  <circle cx="180" cy="485" r="10" stroke="#c51b29" stroke-width="2" fill="none"/>
+  <path d="M180 477 L174 493 M180 477 L186 493 M172 487 L188 487" stroke="#c51b29" stroke-width="2"/>
+
+  <!-- Neck Area -->
+  <path d="M210 330 L210 400 Q250 415 290 400 L290 330 Z" fill="url(#punkRed)"/>
+
+  <!-- Mask Head -->
+  <path d="M150 230 C150 120 200 90 250 90 C300 90 350 120 350 230 C350 320 305 375 250 375 C195 375 150 320 150 230 Z" fill="url(#punkRed)"/>
+
+  <!-- Asymmetric Punk Web Grid on Mask -->
+  <g stroke="#1a0208" stroke-width="2.5" fill="none">
+    <line x1="250" y1="230" x2="250" y2="92"/>
+    <line x1="250" y1="230" x2="200" y2="105"/>
+    <line x1="250" y1="230" x2="300" y2="105"/>
+    <line x1="250" y1="230" x2="160" y2="155"/>
+    <line x1="250" y1="230" x2="340" y2="155"/>
+    <line x1="250" y1="230" x2="155" y2="260"/>
+    <line x1="250" y1="230" x2="345" y2="260"/>
+    <line x1="250" y1="230" x2="210" y2="350"/>
+    <line x1="250" y1="230" x2="290" y2="350"/>
+    <!-- Web Loops -->
+    <path d="M205 160 Q250 185 295 160"/>
+    <path d="M190 205 Q250 235 310 205"/>
+    <path d="M195 280 Q250 315 305 280"/>
+  </g>
+
+  <!-- Big Chrome Mohawk Metal Spikes Atop Mask -->
+  <g fill="url(#chromeMetal)" stroke="#111827" stroke-width="2">
+    <!-- Spike 1 (Front Center) -->
+    <polygon points="245,95 255,95 250,30"/>
+    <!-- Spike 2 -->
+    <polygon points="238,105 248,105 240,45"/>
+    <polygon points="252,105 262,105 260,45"/>
+    <!-- Spike 3 -->
+    <polygon points="228,125 238,125 226,65"/>
+    <polygon points="262,125 272,125 274,65"/>
+    <!-- Spike 4 -->
+    <polygon points="215,150 225,150 208,95"/>
+    <polygon points="275,150 285,150 292,95"/>
+  </g>
+
+  <!-- Fierce Dynamic Angled Eye Lenses -->
+  <!-- Left Eye -->
+  <path d="M242 220 C238 175 198 150 162 170 C155 215 168 275 238 275 C244 255 245 235 242 220 Z" fill="#0b0c10" stroke="#000" stroke-width="4"/>
+  <path d="M234 222 C230 185 200 165 174 180 C168 215 178 258 230 262 C235 248 235 235 234 222 Z" fill="#f8fafc"/>
+  <!-- Right Eye -->
+  <path d="M258 220 C262 175 302 150 338 170 C345 215 332 275 262 275 C256 255 255 235 258 220 Z" fill="#0b0c10" stroke="#000" stroke-width="4"/>
+  <path d="M266 222 C270 185 300 165 326 180 C332 215 322 258 270 262 C265 248 265 235 266 222 Z" fill="#f8fafc"/>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Spider-Verse Explorer</title>
+  <desc id="desc">An original web-and-rift themed title card for the Spider-Verse Explorer project.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#07090f" />
+      <stop offset="0.52" stop-color="#11152a" />
+      <stop offset="1" stop-color="#210b16" />
+    </linearGradient>
+    <radialGradient id="rift">
+      <stop stop-color="#23d6ed" stop-opacity=".3" />
+      <stop offset=".45" stop-color="#792bff" stop-opacity=".2" />
+      <stop offset="1" stop-color="#ee233d" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="type" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#f7f4ea" />
+      <stop offset=".52" stop-color="#8bd9ff" />
+      <stop offset="1" stop-color="#eb3046" />
+    </linearGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#d7e6ff" opacity=".12" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#dots)" />
+  <circle cx="930" cy="315" r="330" fill="url(#rift)" />
+  <g fill="none" stroke="#56dff2" opacity=".36">
+    <circle cx="930" cy="315" r="205" stroke-width="2" />
+    <circle cx="930" cy="315" r="165" stroke-width="1" />
+    <path d="M930 110v410M725 315h410M785 170l290 290M1075 170 785 460M835 125l190 380M1025 125 835 505" stroke-width="1.4" />
+    <path d="M930 150c48 48 94 100 145 165-51 65-97 117-145 165-48-48-94-100-145-165 51-65 97-117 145-165Z" />
+  </g>
+  <g fill="#f33b4e" opacity=".75">
+    <circle cx="780" cy="204" r="4" /><circle cx="1087" cy="287" r="4" /><circle cx="864" cy="478" r="3" />
+  </g>
+  <path d="M76 82h72M76 82v72M1124 548h-72M1124 548v-72" fill="none" stroke="#20d4e8" stroke-width="4" />
+  <text x="78" y="178" fill="#5ee3f2" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="7">INTERACTIVE MULTIVERSE EXPERIENCE</text>
+  <text x="72" y="330" fill="url(#type)" font-family="Arial,sans-serif" font-size="94" font-weight="900" letter-spacing="-4">SPIDER-VERSE</text>
+  <text x="78" y="426" fill="#f7f4ea" font-family="Arial,sans-serif" font-size="70" font-weight="800" letter-spacing="1">EXPLORER</text>
+  <path d="M80 472h385" stroke="#e32b43" stroke-width="5" />
+  <text x="80" y="525" fill="#c4c9dc" font-family="Arial,sans-serif" font-size="24">A cinematic archive of Spider-People across the multiverse.</text>
+  <g transform="translate(1064 70)" fill="none" stroke="#20d4e8" stroke-width="3">
+    <path d="M18 24 5 9 0 12M12 31 0 27M14 39 2 46M22 46 12 58M42 24 55 9 60 12M48 31 60 27M46 39 58 46M38 46 48 58" />
+    <path d="M23 17h14v8h6v17h-7v8H23v-8h-7V25h7z" fill="#20d4e8" />
+    <circle cx="27" cy="29" r="2" fill="#071018" stroke="none" /><circle cx="34" cy="29" r="2" fill="#071018" stroke="none" />
+  </g>
+</svg>

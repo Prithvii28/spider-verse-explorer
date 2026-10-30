@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="noirBg" cx="45%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#22252c"/>
+      <stop offset="50%" stop-color="#121316"/>
+      <stop offset="100%" stop-color="#070708"/>
+    </radialGradient>
+    <linearGradient id="trenchCoat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#262930"/>
+      <stop offset="50%" stop-color="#16171b"/>
+      <stop offset="100%" stop-color="#0a0b0d"/>
+    </linearGradient>
+    <linearGradient id="fedoraFelt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#323640"/>
+      <stop offset="50%" stop-color="#1b1d22"/>
+      <stop offset="100%" stop-color="#0f1013"/>
+    </linearGradient>
+    <linearGradient id="goggleLens" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="40%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="600" fill="url(#noirBg)"/>
+
+  <!-- Noir Spotlight Shadow Beam -->
+  <polygon points="120,0 380,0 480,600 60,600" fill="#ffffff" opacity="0.04"/>
+
+  <!-- Vintage Halftone & Rain Scratch Lines -->
+  <g stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2">
+    <line x1="80" y1="20" x2="60" y2="120"/>
+    <line x1="220" y1="10" x2="200" y2="110"/>
+    <line x1="420" y1="50" x2="390" y2="180"/>
+    <line x1="140" y1="350" x2="110" y2="480"/>
+    <line x1="440" y1="320" x2="410" y2="460"/>
+  </g>
+
+  <!-- Heavy Trench Coat Body & Buttons -->
+  <path d="M100 560 Q120 420 160 380 L250 410 L340 380 Q380 420 400 560 L440 600 L60 600 Z" fill="url(#trenchCoat)"/>
+  
+  <!-- Double-Breasted Trench Coat Lapels -->
+  <polygon points="160,380 230,460 210,560 160,480" fill="#1e2026"/>
+  <polygon points="340,380 270,460 290,560 340,480" fill="#181a1f"/>
+
+  <!-- Trench Coat Collar Upturned -->
+  <polygon points="150,380 180,320 220,385 165,410" fill="#2d3039" stroke="#0e1014" stroke-width="2"/>
+  <polygon points="350,380 320,320 280,385 335,410" fill="#24262e" stroke="#0e1014" stroke-width="2"/>
+
+  <!-- Coat Buttons -->
+  <circle cx="215" cy="490" r="6" fill="#475569" stroke="#0f172a" stroke-width="2"/>
+  <circle cx="215" cy="540" r="6" fill="#475569" stroke="#0f172a" stroke-width="2"/>
+  <circle cx="285" cy="490" r="6" fill="#475569" stroke="#0f172a" stroke-width="2"/>
+  <circle cx="285" cy="540" r="6" fill="#475569" stroke="#0f172a" stroke-width="2"/>
+
+  <!-- Balaclava Mask (Charcoal Black) -->
+  <path d="M170 230 C170 145 205 110 250 110 C295 110 330 145 330 230 C330 315 295 365 250 365 C205 365 170 315 170 230 Z" fill="#14151a"/>
+
+  <!-- Balaclava Rough Stitching Line -->
+  <line x1="250" y1="130" x2="250" y2="360" stroke="#334155" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- Aviator Goggles Strap -->
+  <path d="M165 228 L190 225 M310 225 L335 228" stroke="#3b332a" stroke-width="12" stroke-linecap="round"/>
+  <!-- Goggles Bridge -->
+  <path d="M232 230 Q250 225 268 230" stroke="#64748b" stroke-width="6" fill="none"/>
+
+  <!-- Left Aviator Goggle (Round with Rim Screws) -->
+  <circle cx="205" cy="230" r="32" fill="#0c0d10" stroke="#475569" stroke-width="5"/>
+  <circle cx="205" cy="230" r="24" fill="url(#goggleLens)"/>
+  <!-- Glare slash -->
+  <polygon points="192,212 214,212 198,248 184,248" fill="#ffffff" opacity="0.6"/>
+
+  <!-- Right Aviator Goggle -->
+  <circle cx="295" cy="230" r="32" fill="#0c0d10" stroke="#475569" stroke-width="5"/>
+  <circle cx="295" cy="230" r="24" fill="url(#goggleLens)"/>
+  <!-- Glare slash -->
+  <polygon points="282,212 304,212 288,248 274,248" fill="#ffffff" opacity="0.6"/>
+
+  <!-- Fedora Hat (Crown & Brim) -->
+  <!-- Fedora Crown -->
+  <path d="M190 140 C185 85 205 60 250 65 C295 60 315 85 310 140 Z" fill="url(#fedoraFelt)"/>
+  <!-- Crown Pinch Indent -->
+  <path d="M230 75 Q250 90 270 75" stroke="#0a0a0d" stroke-width="4" fill="none"/>
+  <!-- Fedora Ribbon -->
+  <path d="M188 132 C220 138 280 138 312 132 L314 145 C280 152 220 152 186 145 Z" fill="#0a0b0e"/>
+  <!-- Fedora Wide Brim Casting Shadow -->
+  <ellipse cx="250" cy="145" rx="145" ry="32" fill="url(#fedoraFelt)" stroke="#090a0d" stroke-width="3"/>
+  <!-- Shadow under brim over eyes -->
+  <ellipse cx="250" cy="155" rx="130" ry="18" fill="#000000" opacity="0.6"/>
+</svg>
