@@ -1,11 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
+import useReducedMotion from '../hooks/useReducedMotion';
 
 export default function ScrollReveal({ as: Element = 'div', children, className = '', delay = 0, ...props }) {
   const elementRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     const element = elementRef.current;
+    if (prefersReducedMotion) {
+      setIsVisible(true);
+      return undefined;
+    }
     if (!element || !('IntersectionObserver' in window)) {
       setIsVisible(true);
       return undefined;
@@ -20,12 +26,12 @@ export default function ScrollReveal({ as: Element = 'div', children, className 
 
     observer.observe(element);
     return () => observer.disconnect();
-  }, []);
+  }, [prefersReducedMotion]);
 
   return (
     <Element
       ref={elementRef}
-      className={`scroll-reveal${isVisible ? ' is-visible' : ''}${className ? ` ${className}` : ''}`}
+      className={`scroll-reveal${isVisible || prefersReducedMotion ? ' is-visible' : ''}${className ? ` ${className}` : ''}`}
       {...props}
       style={{ '--reveal-delay': `${delay}ms`, ...props.style }}
     >

@@ -2,6 +2,16 @@
 
 .character-detail-view {
   padding: 2rem 0 5rem 0;
+  font-family: var(--universe-font-body, var(--font-sans));
+  color: var(--universe-ink, var(--text-main));
+}
+
+.detail-filter-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .detail-not-found-container {
@@ -16,7 +26,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: var(--font-mono);
+  font-family: var(--universe-font-mono, var(--font-mono));
   font-size: 0.85rem;
   color: var(--text-muted);
   padding: 0.5rem 0.85rem;
@@ -27,8 +37,8 @@
 }
 
 .back-link:hover {
-  color: var(--crimson-bright);
-  border-color: var(--border-active);
+  color: var(--universe-accent, var(--crimson-bright));
+  border-color: var(--universe-accent, var(--border-active));
 }
 
 /* Dossier Grid */
@@ -54,12 +64,14 @@
 
 .detail-image-card {
   position: relative;
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-subtle);
+  background-color: var(--universe-panel, var(--bg-card));
+  border: 1px solid color-mix(in srgb, var(--universe-accent, var(--border-subtle)) 38%, var(--border-subtle));
   border-radius: 8px;
   overflow: hidden;
   box-shadow: var(--shadow-card);
   aspect-ratio: 5 / 6;
+  isolation: isolate;
+  transition: transform 166ms var(--universe-easing, ease), box-shadow 220ms ease;
 }
 
 .detail-image-card::before {
@@ -69,19 +81,31 @@
   left: 0;
   right: 0;
   height: 4px;
-  background-color: var(--char-accent, var(--crimson-bright));
-  z-index: 3;
+  background-color: var(--universe-accent, var(--char-accent, var(--crimson-bright)));
+  z-index: 5;
 }
 
 .detail-large-portrait {
+  position: relative;
+  z-index: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 25%;
+  filter: var(--universe-filter, none);
+}
+
+.detail-universe-art {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .detail-portrait-overlay {
   position: absolute;
+  z-index: 2;
   inset: 0;
   background: linear-gradient(180deg, transparent 65%, rgba(10, 11, 14, 0.9) 100%);
   pointer-events: none;
@@ -97,7 +121,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  z-index: 2;
+  z-index: 4;
 }
 
 .detail-dimension-tag {
@@ -120,7 +144,7 @@
 }
 
 .specs-card-title {
-  font-family: var(--font-display);
+  font-family: var(--universe-font-display, var(--font-display));
   font-size: 1.2rem;
   letter-spacing: 0.06em;
   color: var(--text-main);
@@ -158,7 +182,7 @@
 }
 
 .status-highlight {
-  color: var(--crimson-bright) !important;
+  color: var(--universe-accent, var(--crimson-bright)) !important;
   font-weight: 600 !important;
 }
 
@@ -170,17 +194,19 @@
 }
 
 .detail-alias-kicker {
-  font-family: var(--font-mono);
+  font-family: var(--universe-font-mono, var(--font-mono));
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.2em;
-  color: var(--char-accent, var(--crimson-bright));
+  color: var(--universe-accent, var(--char-accent, var(--crimson-bright)));
   text-transform: uppercase;
   display: block;
   margin-bottom: 0.25rem;
 }
 
 .detail-hero-name {
+  position: relative;
+  font-family: var(--universe-font-display, var(--font-display));
   font-size: clamp(2.8rem, 6vw, 4.5rem);
   letter-spacing: 0.04em;
   line-height: 1;
@@ -192,7 +218,7 @@
   font-style: italic;
   color: var(--text-muted);
   line-height: 1.55;
-  border-left: 3px solid var(--char-accent, var(--crimson-primary));
+  border-left: 3px solid var(--universe-accent, var(--char-accent, var(--crimson-primary)));
   padding-left: 1rem;
 }
 
@@ -203,6 +229,7 @@
 }
 
 .detail-block-heading {
+  font-family: var(--universe-font-display, var(--font-display));
   font-size: 1.45rem;
   letter-spacing: 0.05em;
   color: var(--text-main);
@@ -219,6 +246,7 @@
 }
 
 .detail-bio-paragraph {
+  font-family: var(--universe-font-body, var(--font-sans));
   font-size: 1.05rem;
   line-height: 1.75;
   color: var(--text-muted);
@@ -275,6 +303,7 @@
 }
 
 .suit-notes-text {
+  font-family: var(--universe-font-body, var(--font-sans));
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--text-muted);
@@ -302,7 +331,7 @@
   display: flex;
   flex-direction: column;
   padding: 1rem 1.2rem;
-  background-color: var(--bg-card);
+  background-color: var(--universe-panel, var(--bg-card));
   border: 1px solid var(--border-subtle);
   border-radius: 6px;
   text-align: left;
@@ -315,21 +344,21 @@
 
 .jump-nav-btn:hover {
   background-color: var(--bg-card-hover);
-  border-color: var(--crimson-bright);
+  border-color: var(--universe-accent, var(--crimson-bright));
   transform: translateY(-2px);
 }
 
 .jump-nav-dir {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  color: var(--crimson-bright);
+  color: var(--universe-accent, var(--crimson-bright));
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 0.25rem;
 }
 
 .jump-nav-name {
-  font-family: var(--font-display);
+  font-family: var(--universe-font-display, var(--font-display));
   font-size: 1.35rem;
   color: var(--text-main);
   letter-spacing: 0.04em;
@@ -337,8 +366,215 @@
 }
 
 .jump-nav-universe {
-  font-family: var(--font-mono);
+  font-family: var(--universe-font-mono, var(--font-mono));
   font-size: 0.72rem;
   color: var(--text-dim);
   margin-top: 0.2rem;
+}
+
+/* Stop-motion helper: pair with a 166ms animation for a roughly 12fps cadence. */
+.on-twos {
+  animation-timing-function: steps(2, end) !important;
+  transition-timing-function: steps(2, end) !important;
+}
+
+.detail-image-card.on-twos:hover {
+  animation: dossier-card-tilt 166ms ease-out both;
+}
+
+.detail-hero-name.on-twos:hover {
+  animation: dossier-title-glitch 166ms ease-out both;
+}
+
+@keyframes dossier-card-tilt {
+  0% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-4px) rotate(-0.9deg); }
+  100% { transform: translateY(-2px) rotate(-0.45deg); }
+}
+
+@keyframes dossier-title-glitch {
+  0%, 100% { transform: translateX(0); text-shadow: none; }
+  50% { transform: translateX(2px); text-shadow: -3px 0 var(--universe-secondary), 3px 0 var(--universe-accent); }
+}
+
+/* Noir: monochrome pulp stock, moving film grain and a restrained projector flicker. */
+.character-detail-view[data-universe="Earth-90214"] .detail-large-portrait {
+  filter: var(--universe-filter) grayscale(1) contrast(1.08);
+}
+
+.character-detail-view[data-universe="Earth-90214"] .detail-universe-art::before {
+  content: "";
+  position: absolute;
+  inset: -15% 0 0 25%;
+  background: radial-gradient(ellipse at 72% 18%, rgba(255, 245, 218, 0.32), transparent 56%);
+  mix-blend-mode: screen;
+  opacity: 0.42;
+  animation: noir-projector-flicker 4.8s steps(2, end) infinite;
+}
+
+@keyframes noir-projector-flicker {
+  0%, 18%, 22%, 64%, 68%, 100% { opacity: 0.42; }
+  20%, 66% { opacity: 0.22; }
+}
+
+/* Peni: pastel cel-shading with radial anime action rays. */
+.character-detail-view[data-universe="Earth-14512"] .detail-image-card {
+  border-radius: 18px 7px 18px 7px;
+  box-shadow: 0 16px 42px rgba(93, 73, 141, 0.25), 0 0 0 4px rgba(255, 244, 251, 0.08);
+}
+
+.character-detail-view[data-universe="Earth-14512"] .detail-large-portrait {
+  filter: var(--universe-filter) saturate(0.66) brightness(1.1) contrast(0.96);
+}
+
+.character-detail-view[data-universe="Earth-14512"] .detail-universe-art::before {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  background: repeating-conic-gradient(from 198deg at 80% 25%, transparent 0deg 7deg, rgba(255, 246, 252, 0.3) 7.2deg 7.65deg, transparent 7.9deg 16deg);
+  opacity: 0.58;
+  transform: scale(1.1);
+  animation: peni-speed-lines 1.4s steps(6, end) infinite;
+}
+
+.character-detail-view[data-universe="Earth-14512"] .detail-universe-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, rgba(255, 205, 229, 0.46), rgba(170, 242, 244, 0.4) 48%, rgba(229, 207, 255, 0.24));
+  mix-blend-mode: soft-light;
+  opacity: 0.7;
+}
+
+@keyframes peni-speed-lines {
+  0% { transform: scale(1.1) translateX(0); }
+  50% { transform: scale(1.14) translateX(-1.3%); }
+  100% { transform: scale(1.1) translateX(0); }
+}
+
+/* Spider-Ham: bold ink outline, paper-white frame and elastic hover. */
+.character-detail-view[data-universe="Earth-8311"] .detail-image-card {
+  border: 4px solid var(--universe-ink);
+  border-radius: 18px 14px 20px 12px;
+  box-shadow: 7px 8px 0 var(--universe-accent), var(--shadow-card);
+}
+
+.character-detail-view[data-universe="Earth-8311"] .detail-image-card:hover {
+  animation: spider-ham-bounce 280ms var(--universe-easing) both;
+}
+
+.character-detail-view[data-universe="Earth-8311"] .detail-large-portrait {
+  filter: var(--universe-filter) saturate(1.12);
+}
+
+@keyframes spider-ham-bounce {
+  0% { transform: translateY(0) scale(1); }
+  48% { transform: translateY(-8px) scale(1.018, 0.985); }
+  76% { transform: translateY(2px) scale(0.995, 1.012); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+/* Spider-Punk: torn zine edges, pasted color blocks and cutout jitter on hover. */
+.character-detail-view[data-universe="Earth-138"] .detail-image-card {
+  border: 2px solid var(--universe-ink);
+  border-radius: 0;
+  clip-path: polygon(1% 0, 96% 1%, 100% 5%, 98% 16%, 100% 29%, 98% 42%, 100% 59%, 98% 75%, 100% 91%, 96% 100%, 4% 98%, 0 94%, 2% 78%, 0 62%, 2% 45%, 0 26%, 2% 11%);
+  box-shadow: 8px 9px 0 rgba(0, 0, 0, 0.6);
+}
+
+.character-detail-view[data-universe="Earth-138"] .detail-universe-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(125deg, transparent 0 44%, rgba(251, 60, 98, 0.28) 44.3% 55%, transparent 55.3%), repeating-linear-gradient(0deg, transparent 0 17px, rgba(245, 240, 220, 0.07) 18px 19px);
+  mix-blend-mode: screen;
+  opacity: 0.7;
+}
+
+.character-detail-view[data-universe="Earth-138"] .detail-hero-name {
+  text-shadow: 3px 2px 0 rgba(251, 60, 98, 0.52), -2px -1px 0 rgba(67, 217, 255, 0.42);
+  letter-spacing: 0.02em;
+}
+
+.character-detail-view[data-universe="Earth-138"] .detail-image-card.on-twos:hover {
+  animation: punk-cutout-jitter 166ms ease-in-out infinite;
+}
+
+@keyframes punk-cutout-jitter {
+  0%, 100% { transform: translate(0, 0) rotate(0); }
+  50% { transform: translate(1px, -1px) rotate(0.45deg); }
+}
+
+/* Miguel 2099: cyan HUD framing, scanlines and a restrained title glitch. */
+.character-detail-view[data-universe="Earth-928"] .detail-image-card {
+  border: 1px solid rgba(0, 229, 255, 0.75);
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.15), 0 0 28px rgba(0, 229, 255, 0.12), var(--shadow-card);
+}
+
+.character-detail-view[data-universe="Earth-928"] .detail-universe-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(to bottom, rgba(0, 229, 255, 0.13) 0 1px, transparent 1px 5px), linear-gradient(135deg, rgba(0, 229, 255, 0.12), transparent 42%);
+  opacity: 0.66;
+}
+
+.character-detail-view[data-universe="Earth-928"] .detail-universe-art::after {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 1px solid rgba(0, 229, 255, 0.58);
+  clip-path: polygon(0 0, 16% 0, 16% 1px, 1px 1px, 1px 16%, 0 16%, 0 0, 84% 0, 100% 0, 100% 16%, calc(100% - 1px) 16%, calc(100% - 1px) 1px, 84% 1px, 84% 0, 100% 84%, 100% 100%, 84% 100%, 84% calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 84%, 100% 84%, 16% 100%, 0 100%, 0 84%, 1px 84%, 1px calc(100% - 1px), 16% calc(100% - 1px), 16% 100%);
+  opacity: 0.72;
+}
+
+.character-detail-view[data-universe="Earth-928"] .detail-hero-name.on-twos:hover {
+  animation: miguel-title-glitch 166ms ease-in-out infinite;
+}
+
+@keyframes miguel-title-glitch {
+  0%, 100% { transform: translateX(0); text-shadow: none; }
+  50% { transform: translateX(2px); text-shadow: -3px 0 #00e5ff, 3px 0 #ff204e; }
+}
+
+/* Miles: printed halftone, ink-black panels and electric graffiti accents. */
+.character-detail-view[data-universe="Earth-1610"] .detail-universe-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255, 53, 94, 0.75) 1px, transparent 1.6px);
+  background-size: 11px 11px;
+  opacity: 0.28;
+  mask-image: linear-gradient(135deg, #000 0 24%, transparent 76%);
+}
+
+.character-detail-view[data-universe="Earth-1610"] .detail-hero-name {
+  text-shadow: 3px 2px 0 rgba(255, 53, 94, 0.42), -2px -1px 0 rgba(0, 229, 255, 0.34);
+}
+
+.character-detail-view[data-universe="Earth-1610"] .detail-image-card.on-twos:hover {
+  box-shadow: 5px 6px 0 var(--universe-accent), 0 0 24px rgba(0, 229, 255, 0.18);
+}
+
+@media (max-width: 520px) {
+  .detail-jump-nav { gap: 0.65rem; }
+  .jump-nav-btn { padding: 0.85rem 0.7rem; }
+  .jump-nav-name { font-size: 1.15rem; overflow-wrap: anywhere; }
+  .detail-portrait-badge-row { left: 0.8rem; right: 0.8rem; bottom: 0.8rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .detail-image-card,
+  .detail-hero-name,
+  .detail-universe-art::before,
+  .detail-universe-art::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .detail-image-card,
+  .detail-hero-name {
+    transform: none !important;
+  }
 }

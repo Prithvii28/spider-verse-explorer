@@ -5,12 +5,14 @@ import CharacterCard from '../components/CharacterCard';
 import DimensionalRiftCanvas from '../components/DimensionalRiftCanvas';
 import MultiverseJumpOverlay from '../components/MultiverseJumpOverlay';
 import ScrollReveal from '../components/ScrollReveal';
+import useReducedMotion from '../hooks/useReducedMotion';
 import '../styles/home.css';
 
 export default function HomePage() {
   const navigate = useNavigate();
   const [jumpActive, setJumpActive] = useState(false);
   const [jumpSlug, setJumpSlug] = useState('');
+  const prefersReducedMotion = useReducedMotion();
 
   // Featured 4 characters: Peter Parker, Miles Morales, Gwen Stacy, Miguel O'Hara
   const featuredSlugs = ['peter-parker', 'miles-morales', 'gwen-stacy', 'miguel-ohara'];
@@ -18,7 +20,6 @@ export default function HomePage() {
   const universeCount = new Set(charactersData.map((character) => character.universe)).size;
 
   const handleNavigateWithJump = (slug) => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) {
       navigate(`/characters/${slug}`);
       return;
@@ -40,8 +41,7 @@ export default function HomePage() {
     e.preventDefault();
     const section = document.getElementById('how-it-works');
     if (section) {
-      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      section.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' });
+      section.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
     }
   };
 

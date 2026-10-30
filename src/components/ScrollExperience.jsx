@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
+import useReducedMotion from '../hooks/useReducedMotion';
 
 export default function ScrollExperience() {
   const progressRef = useRef(null);
   const [showTop, setShowTop] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     let frame = 0;
@@ -27,8 +29,7 @@ export default function ScrollExperience() {
   }, []);
 
   const backToTop = () => {
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
   };
 
   return (

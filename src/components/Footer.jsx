@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useReducedMotion from '../hooks/useReducedMotion';
 import '../styles/footer.css';
 
 export default function Footer() {
+  const prefersReducedMotion = useReducedMotion();
+
   const scrollToTop = () => {
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
   };
 
   return (

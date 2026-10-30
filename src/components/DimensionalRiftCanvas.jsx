@@ -1,7 +1,9 @@
 import React, { useRef, useEffect } from 'react';
+import useReducedMotion from '../hooks/useReducedMotion';
 
 export default function DimensionalRiftCanvas() {
   const canvasRef = useRef(null);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -13,9 +15,6 @@ export default function DimensionalRiftCanvas() {
     let width = (canvas.width = canvas.parentElement.offsetWidth);
     let height = (canvas.height = canvas.parentElement.offsetHeight);
     let pointer = null;
-
-    // Check reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // Web filament nodes
     const nodeCount = Math.min(Math.floor(width / 35), 28);
@@ -189,7 +188,7 @@ export default function DimensionalRiftCanvas() {
       canvas.parentElement?.removeEventListener('pointerleave', handlePointerLeave);
       if (animationFrameId) cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [prefersReducedMotion]);
 
   return (
     <canvas

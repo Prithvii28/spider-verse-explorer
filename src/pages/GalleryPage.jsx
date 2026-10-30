@@ -4,11 +4,13 @@ import charactersData from '../data/characters.json';
 import CharacterCard from '../components/CharacterCard';
 import MultiverseJumpOverlay from '../components/MultiverseJumpOverlay';
 import ScrollReveal from '../components/ScrollReveal';
+import useReducedMotion from '../hooks/useReducedMotion';
 import '../styles/gallery.css';
 
 export default function GalleryPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
+  const prefersReducedMotion = useReducedMotion();
 
   // Read universe filter from URL query string
   const selectedUniverse = searchParams.get('universe') || 'ALL';
@@ -53,7 +55,6 @@ export default function GalleryPage() {
 
   // Multiverse jump transition
   const handleNavigateWithJump = (slug) => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) {
       navigate(`/characters/${slug}`);
       return;

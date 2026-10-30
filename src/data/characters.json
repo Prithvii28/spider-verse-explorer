@@ -22,7 +22,23 @@
     "firstAppearance": "Amazing Fantasy #15 (1962)",
     "status": "Active Multiverse Anchor",
     "dimensionType": "Prime Continuity",
-    "suitNotes": "Classic red & blue spandex weave with reinforced webbing grid, external wrist-mounted mechanical web-shooters, and high-tensile eye aperture lenses."
+    "suitNotes": "Classic red & blue spandex weave with reinforced webbing grid, external wrist-mounted mechanical web-shooters, and high-tensile eye aperture lenses.",
+    "theme": {
+      "id": "prime",
+      "fonts": {
+        "display": "var(--font-display)",
+        "body": "var(--font-sans)",
+        "mono": "var(--font-mono)"
+      },
+      "variables": {
+        "--universe-accent": "#e63946",
+        "--universe-secondary": "#1d3557",
+        "--universe-panel": "#12141b",
+        "--universe-ink": "#f7f4ea"
+      },
+      "filterId": "none",
+      "easing": "cubic-bezier(0.2, 0.8, 0.2, 1)"
+    }
   },
   {
     "id": "miles-morales-1610",
@@ -47,7 +63,23 @@
     "firstAppearance": "Ultimate Fallout #4 (2011)",
     "status": "Active Champion",
     "dimensionType": "Ultimate Timeline",
-    "suitNotes": "Custom spray-painted black tactical weave with crimson graffiti web motif and shock-absorbent urban sneakers."
+    "suitNotes": "Custom spray-painted black tactical weave with crimson graffiti web motif and shock-absorbent urban sneakers.",
+    "theme": {
+      "id": "miles",
+      "fonts": {
+        "display": "var(--font-display)",
+        "body": "var(--font-sans)",
+        "mono": "var(--font-mono)"
+      },
+      "variables": {
+        "--universe-accent": "#ff355e",
+        "--universe-secondary": "#00e5ff",
+        "--universe-panel": "#15111a",
+        "--universe-ink": "#fff5f2"
+      },
+      "filterId": "miles-halftone",
+      "easing": "steps(2, end)"
+    }
   },
   {
     "id": "gwen-stacy-65",
@@ -72,7 +104,23 @@
     "firstAppearance": "Edge of Spider-Verse #2 (2014)",
     "status": "Interdimensional Traveler",
     "dimensionType": "Alternative Earth-65",
-    "suitNotes": "Aerodynamic white cowl hoodie lined with vibrant magenta webbing pattern, teal-accented stealth soles, and sleek frameless oculars."
+    "suitNotes": "Aerodynamic white cowl hoodie lined with vibrant magenta webbing pattern, teal-accented stealth soles, and sleek frameless oculars.",
+    "theme": {
+      "id": "gwen",
+      "fonts": {
+        "display": "var(--font-display)",
+        "body": "var(--font-sans)",
+        "mono": "var(--font-mono)"
+      },
+      "variables": {
+        "--universe-accent": "#f06aa8",
+        "--universe-secondary": "#81e7ee",
+        "--universe-panel": "#171525",
+        "--universe-ink": "#f8f1ff"
+      },
+      "filterId": "none",
+      "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)"
+    }
   },
   {
     "id": "miguel-ohara-928",
@@ -97,7 +145,23 @@
     "firstAppearance": "Amazing Spider-Man #365 (1992)",
     "status": "Spider-Society Commander",
     "dimensionType": "Cyber-Futuristic Dystopia",
-    "suitNotes": "Unstable-molecule Day of the Dead weave with aggressive red death's-head arachnid sigil, holographic airfoil cape, and hard-light forearm spikes."
+    "suitNotes": "Unstable-molecule Day of the Dead weave with aggressive red death's-head arachnid sigil, holographic airfoil cape, and hard-light forearm spikes.",
+    "theme": {
+      "id": "miguel",
+      "fonts": {
+        "display": "var(--font-display)",
+        "body": "var(--font-mono)",
+        "mono": "var(--font-mono)"
+      },
+      "variables": {
+        "--universe-accent": "#ff204e",
+        "--universe-secondary": "#00e5ff",
+        "--universe-panel": "#0a1018",
+        "--universe-ink": "#e7fbff"
+      },
+      "filterId": "miguel-hud",
+      "easing": "steps(2, end)"
+    }
   },
   {
     "id": "spider-man-noir-90214",
@@ -122,7 +186,23 @@
     "firstAppearance": "Spider-Man Noir #1 (2009)",
     "status": "Vigilante Detective",
     "dimensionType": "1930s Noir Pulp Universe",
-    "suitNotes": "WWI aviator goggles stitched onto a balaclava, wool fedora, heavy double-breasted trench coat, and vintage leather gun holster."
+    "suitNotes": "WWI aviator goggles stitched onto a balaclava, wool fedora, heavy double-breasted trench coat, and vintage leather gun holster.",
+    "theme": {
+      "id": "noir",
+      "fonts": {
+        "display": "var(--font-display)",
+        "body": "var(--font-mono)",
+        "mono": "var(--font-mono)"
+      },
+      "variables": {
+        "--universe-accent": "#d5d6d7",
+        "--universe-secondary": "#777b83",
+        "--universe-panel": "#101114",
+        "--universe-ink": "#f1f0eb"
+      },
+      "filterId": "noir-film-grain",
+      "easing": "steps(2, end)"
+    }
   },
   {
     "id": "peni-parker-14512",
@@ -147,7 +227,23 @@
     "firstAppearance": "Edge of Spider-Verse #5 (2014)",
     "status": "Cyber-Mech Operative",
     "dimensionType": "Neo-Manga Techverse",
-    "suitNotes": "High-agility neural piloting school uniform paired with the spherical bipedal SP//dr chassis featuring illuminated multi-spectral optical clusters."
+    "suitNotes": "High-agility neural piloting school uniform paired with the spherical bipedal SP//dr chassis featuring illuminated multi-spectral optical clusters.",
+    "theme": {
+      "id": "peni",
+      "fonts": {
+        "display": "var(--font-display)",
+        "body": "var(--font-sans)",
+        "mono": "var(--font-mono)"
+      },
+      "variables": {
+        "--universe-accent": "#ff81ba",
+        "--universe-secondary": "#83e6ed",
+        "--universe-panel": "#182034",
+        "--universe-ink": "#fff4fb"
+      },
+      "filterId": "peni-cel-shade",
+      "easing": "cubic-bezier(0.22, 0.61, 0.36, 1)"
+    }
   },
   {
     "id": "peter-porker-8311",
@@ -172,7 +268,23 @@
     "firstAppearance": "Marvel Tails Starring Peter Porker #1 (1983)",
     "status": "Cartoon Guardian",
     "dimensionType": "Toon Aniverse",
-    "suitNotes": "Classic webbed red-and-blue pattern tailored with wide ocular eye slits and custom reinforced dual-nostril pig snout mask."
+    "suitNotes": "Classic webbed red-and-blue pattern tailored with wide ocular eye slits and custom reinforced dual-nostril pig snout mask.",
+    "theme": {
+      "id": "ham",
+      "fonts": {
+        "display": "var(--font-display)",
+        "body": "var(--font-sans)",
+        "mono": "var(--font-mono)"
+      },
+      "variables": {
+        "--universe-accent": "#ffd166",
+        "--universe-secondary": "#ff5964",
+        "--universe-panel": "#251b20",
+        "--universe-ink": "#fff1c9"
+      },
+      "filterId": "ham-ink-outline",
+      "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+    }
   },
   {
     "id": "hobie-brown-138",
@@ -197,7 +309,23 @@
     "firstAppearance": "Amazing Spider-Man Vol. 3 #10 (2015)",
     "status": "Anarchist Resistance Leader",
     "dimensionType": "Dystopian Punk Rock Reality",
-    "suitNotes": "Frayed denim battle jacket pinned with subversive patches, chrome mohawk spikes atop mask, and heavy combat lace-up boots."
+    "suitNotes": "Frayed denim battle jacket pinned with subversive patches, chrome mohawk spikes atop mask, and heavy combat lace-up boots.",
+    "theme": {
+      "id": "punk",
+      "fonts": {
+        "display": "var(--font-display)",
+        "body": "var(--font-mono)",
+        "mono": "var(--font-mono)"
+      },
+      "variables": {
+        "--universe-accent": "#fb3c62",
+        "--universe-secondary": "#43d9ff",
+        "--universe-panel": "#111015",
+        "--universe-ink": "#f5f0dc"
+      },
+      "filterId": "punk-print",
+      "easing": "steps(2, end)"
+    }
   },
   {
     "id": "mayday-parker-982",
@@ -222,7 +350,23 @@
     "firstAppearance": "What If? Vol. 2 #105 (1998)",
     "status": "MC2 Next-Gen Defender",
     "dimensionType": "MC2 Alternate Future",
-    "suitNotes": "Modified Ben Reilly scarlet-and-navy pattern with extended chest arachnid legs, contoured feminine cut, and streamlined gauntlets."
+    "suitNotes": "Modified Ben Reilly scarlet-and-navy pattern with extended chest arachnid legs, contoured feminine cut, and streamlined gauntlets.",
+    "theme": {
+      "id": "mayday",
+      "fonts": {
+        "display": "var(--font-display)",
+        "body": "var(--font-sans)",
+        "mono": "var(--font-mono)"
+      },
+      "variables": {
+        "--universe-accent": "#ff6cab",
+        "--universe-secondary": "#80d8e7",
+        "--universe-panel": "#151522",
+        "--universe-ink": "#fff4fb"
+      },
+      "filterId": "none",
+      "easing": "cubic-bezier(0.2, 0.8, 0.2, 1)"
+    }
   },
   {
     "id": "ben-reilly-616",
@@ -247,6 +391,22 @@
     "firstAppearance": "Amazing Spider-Man #149 (1975)",
     "status": "Independent Web-Slinger",
     "dimensionType": "Clone Saga Divergence",
-    "suitNotes": "Sleeveless cobalt blue hoodie emblazoned with asymmetrical black spider icon worn over pure crimson bodysuit with external chrome wrist shooters."
+    "suitNotes": "Sleeveless cobalt blue hoodie emblazoned with asymmetrical black spider icon worn over pure crimson bodysuit with external chrome wrist shooters.",
+    "theme": {
+      "id": "scarlet",
+      "fonts": {
+        "display": "var(--font-display)",
+        "body": "var(--font-sans)",
+        "mono": "var(--font-mono)"
+      },
+      "variables": {
+        "--universe-accent": "#ff5964",
+        "--universe-secondary": "#58a9df",
+        "--universe-panel": "#14141b",
+        "--universe-ink": "#f7f4ea"
+      },
+      "filterId": "none",
+      "easing": "cubic-bezier(0.2, 0.8, 0.2, 1)"
+    }
   }
 ]

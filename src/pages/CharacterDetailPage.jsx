@@ -3,11 +3,13 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import charactersData from '../data/characters.json';
 import Breadcrumb from '../components/Breadcrumb';
 import MultiverseJumpOverlay from '../components/MultiverseJumpOverlay';
+import useReducedMotion from '../hooks/useReducedMotion';
 import '../styles/character-detail.css';
 
 export default function CharacterDetailPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
+  const prefersReducedMotion = useReducedMotion();
 
   const [jumpActive, setJumpActive] = useState(false);
   const [jumpSlug, setJumpSlug] = useState('');
@@ -34,7 +36,6 @@ export default function CharacterDetailPage() {
   };
 
   const handleNavigateWithJump = (targetSlug) => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) {
       navigate(`/characters/${targetSlug}`);
       return;
@@ -76,9 +77,85 @@ export default function CharacterDetailPage() {
     );
   }
 
+  const theme = character.theme;
+  const themeStyle = {
+    '--char-accent': character.accentColor,
+    '--universe-font-display': theme.fonts.display,
+    '--universe-font-body': theme.fonts.body,
+    '--universe-font-mono': theme.fonts.mono,
+    '--universe-easing': theme.easing,
+    '--universe-filter': theme.filterId === 'none' ? 'none' : `url(#${theme.filterId})`,
+    ...theme.variables,
+  };
+
   return (
-    <div className="character-detail-view" style={{ '--char-accent': character.accentColor }}>
+    <div
+      className="character-detail-view"
+      data-universe={character.universe}
+      data-theme={theme.id}
+      data-filter-id={theme.filterId}
+      style={themeStyle}
+    >
       <MultiverseJumpOverlay isActive={jumpActive} targetSlug={jumpSlug} />
+
+      <svg className="detail-filter-defs" aria-hidden="true" focusable="false">
+        <defs>
+          {theme.filterId === 'noir-film-grain' && (
+            <filter id="noir-film-grain" x="-4%" y="-4%" width="108%" height="108%" colorInterpolationFilters="sRGB">
+              <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="2" seed="2" result="grain">
+                {!prefersReducedMotion && (
+                  <animate attributeName="seed" values="2;8;4;11;3;9;2" dur="560ms" repeatCount="indefinite" />
+                )}
+              </feTurbulence>
+              <feColorMatrix in="grain" type="saturate" values="0" result="mono-grain" />
+              <feComponentTransfer in="mono-grain" result="soft-grain">
+                <feFuncA type="table" tableValues="0 0.12" />
+              </feComponentTransfer>
+              <feBlend in="SourceGraphic" in2="soft-grain" mode="multiply" />
+            </filter>
+          )}
+          {theme.filterId === 'peni-cel-shade' && (
+            <filter id="peni-cel-shade" colorInterpolationFilters="sRGB">
+              <feComponentTransfer>
+                <feFuncR type="discrete" tableValues="0 0.34 0.68 1" />
+                <feFuncG type="discrete" tableValues="0 0.38 0.72 1" />
+                <feFuncB type="discrete" tableValues="0 0.42 0.78 1" />
+              </feComponentTransfer>
+            </filter>
+          )}
+          {theme.filterId === 'ham-ink-outline' && (
+            <filter id="ham-ink-outline" x="-5%" y="-5%" width="110%" height="110%">
+              <feMorphology in="SourceAlpha" operator="dilate" radius="1.5" result="expanded-alpha" />
+              <feFlood floodColor="#111015" result="ink" />
+              <feComposite in="ink" in2="expanded-alpha" operator="in" result="outline" />
+              <feComposite in="SourceGraphic" in2="outline" operator="over" />
+            </filter>
+          )}
+          {theme.filterId === 'miles-halftone' && (
+            <filter id="miles-halftone" colorInterpolationFilters="sRGB">
+              <feComponentTransfer>
+                <feFuncR type="linear" slope="1.08" intercept="-0.015" />
+                <feFuncG type="linear" slope="1.04" intercept="0" />
+                <feFuncB type="linear" slope="1.1" intercept="0.015" />
+              </feComponentTransfer>
+            </filter>
+          )}
+          {theme.filterId === 'miguel-hud' && (
+            <filter id="miguel-hud" colorInterpolationFilters="sRGB">
+              <feColorMatrix type="matrix" values="0.92 0 0 0 0  0 1 0 0 0.025  0 0 1.08 0 0.06  0 0 0 1 0" />
+            </filter>
+          )}
+          {theme.filterId === 'punk-print' && (
+            <filter id="punk-print" colorInterpolationFilters="sRGB">
+              <feComponentTransfer>
+                <feFuncR type="linear" slope="1.1" intercept="-0.02" />
+                <feFuncG type="linear" slope="1.08" intercept="-0.015" />
+                <feFuncB type="linear" slope="1.12" intercept="-0.025" />
+              </feComponentTransfer>
+            </filter>
+          )}
+        </defs>
+      </svg>
 
       <div className="container">
         {/* Breadcrumb Navigation */}
@@ -104,13 +181,14 @@ export default function CharacterDetailPage() {
         <div className="detail-dossier-grid">
           {/* Left Column: Big Portrait Artwork & Visual Metadata */}
           <div className="detail-portrait-col">
-            <div className="detail-image-card">
+            <div className={`detail-image-card${theme.id === 'ham' ? ' ham-bounce-card' : ' on-twos'}`}>
               <img
                 src={imgSrc}
                 alt={character.alt}
                 className="detail-large-portrait"
                 onError={handleImageError}
               />
+              <div className="detail-universe-art" aria-hidden="true" />
               <div className="detail-portrait-overlay" aria-hidden="true" />
               <div className="detail-portrait-badge-row">
                 <span className="universe-badge">{character.universe}</span>
@@ -146,7 +224,7 @@ export default function CharacterDetailPage() {
           <div className="detail-content-col">
             <div className="detail-header-block">
               <span className="detail-alias-kicker">{character.alias}</span>
-              <h1 className="detail-hero-name">{character.name}</h1>
+              <h1 className={`detail-hero-name${['miles', 'miguel', 'punk'].includes(theme.id) ? ' on-twos' : ''}`}>{character.name}</h1>
               <p className="detail-tagline-quote">"{character.tagline}"</p>
             </div>
 
