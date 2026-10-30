@@ -171,7 +171,7 @@ export default function HomePage() {
                 A universe of heroes to explore
               </h2>
               <p className="about-text">
-                The Spider-Verse Explorer is an educational web application cataloging variant Spider-Heroes across different dimensions of the comic multiverse. It provides a structured, responsive interface to inspect continuity designations, tactical abilities, and origin trajectories.
+                The Spider-Verse Explorer is an web application cataloging variant Spider-Heroes across different dimensions of the comic multiverse. It provides a structured, responsive interface to inspect continuity designations, tactical abilities, and origin trajectories.
               </p>
 
               <div className="about-features-list">

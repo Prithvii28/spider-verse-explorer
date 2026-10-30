@@ -21,7 +21,7 @@ export default function Footer() {
               <span className="brand-subtitle">EXPLORER</span>
             </div>
             <p className="footer-desc">
-              An educational, interactive frontend exploration of parallel dimensional arachnid heroes across alternate continuities.
+              An Interactive exploration of parallel dimensional arachnid heroes across alternate continuities.
             </p>
             <div className="footer-meta-pill">
               <span className="pulse-dot"></span>
